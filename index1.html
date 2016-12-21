@@ -1,0 +1,370 @@
+<!doctype html>
+
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Node.js 開發 with React.js</title>
+    
+    <meta name="author" content=4"yicheng" />
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+    
+    Now that's the core element used by impress.js.
+    
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+    
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+    
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+    
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesting things
+    right around the corner of this tag ;)
+    
+-->
+<div id="impress">
+
+    <!--
+        
+        Here is where interesting thing start to happen.
+        
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+        
+        Positioning information is passed through data attributes.
+        
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500"` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+        
+        It will not be rotated or scaled.
+        
+    -->
+    <div id="bored" class="step slide" data-x="-1000" data-y="-1500">
+        <q>Node.js 開發 with React.js</q>
+        <a href="https://hahow.in/cr/nodejs-lession"> https://hahow.in/cr/nodejs-lession</a>
+    </div>
+
+    <!--
+        
+        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
+        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
+        
+        So in the example below it'll be `step-2`.
+        
+        The hash part of the url when this step is active will be `#/step-2`.
+        
+        You can also use `#step-2` in a link, to point directly to this particular step.
+        
+        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
+        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
+        
+    -->
+    <div class="step slide" data-x="0" data-y="-1500">
+        <h1 style="font-size:50px">課程簡介</h1>
+        <p style="margin-top:100px">前幾堂課將會個別介紹Node.js核心模組之特性，並且講述相關nodejs框架，最後使用Node.js開發一個論壇類型網站，課程將會使用React.js作為前端Framework 課程後面幾堂課會提到有關web cache方面，安全方面，load balance等議題 最後會講解上架到AWS 的EC2上，使用nginx 當reverse proxy 並配置https的步驟</p>
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="-1500">
+        <h1 style="font-size:50px">Node.js 模組介紹</h1>
+        <img  src="https://hahow.in/images/5855f4caf528320700f8b1c8?width=1000" width="800px" style="margin-top:100px" >
+    </div>
+
+    <div class="step slide" data-x="2000" data-y="-1500">
+        <h1 style="font-size:50px">React.js Redux 開發</h1>
+        <img  src="https://hahow.in/images/5855feaaf528320700f8b1f2?width=1000" width="800px" style="margin-top:100px" >
+    </div>
+
+    <div class="step slide" data-x="3000" data-y="-1500">
+        <h1 style="font-size:50px">Material UI 框架介紹</h1>
+        <img  src="https://hahow.in/images/5855f97bf528320700f8b1dd?width=1000" width="800px" style="margin-top:100px" >
+    </div>
+
+    <div class="step slide" data-x="4000" data-y="-1500">
+        <h1 style="font-size:50px">使用swagger撰寫API文件</h1>
+        <img  src="https://hahow.in/images/5855f5fbf528320700f8b1cc?width=1000" width="800px" style="margin-top:100px" >
+    </div>
+
+    <div class="step slide" data-x="5000" data-y="-1500">
+        <h1 style="font-size:50px">MongoDB,MySQL,Redis資料庫操作</h1>
+        <img  src="https://hahow.in/images/5855fd4bf528320700f8b1ea?width=1000" width="800px" style="margin-top:100px" >
+    </div>
+
+    <div class="step slide" data-x="6000" data-y="-1500">
+        <h1 style="font-size:50px">Https教學 與 nginx配置</h1>
+        <img  src="https://hahow.in/images/5855f691f528320700f8b1d0?width=1000" width="800px" style="margin-top:100px" >
+    </div>
+
+
+    <div class="step slide" data-x="7000" data-y="-1500">
+        <h1 style="font-size:50px">Travis CI 教學</h1>
+        <img  src="https://hahow.in/images/5855f716f528320700f8b1d1?width=1000" width="800px" style="margin-top:100px" >
+    </div>
+    <!--
+        
+        This is an example of step element being scaled.
+        
+        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
+        element will be 4 times larger than the others.
+        From presentation and transitions point of view it means, that it will have to be scaled
+        down (4 times) to make it back to its correct size.
+        
+    -->
+    <div id="title" class="step" data-x="0" data-y="-100" data-scale="4">
+        <span style="font-size:20px;margin-top:-200px" class="try">單元1 - Node.js安裝與NPM使用 </br>
+
+單元2 - fs(文件操作) 與 require 、 module.exports </br>
+
+單元3 - EventEmitter(事件觸發) </br>
+
+單元4 - util(工具類) </br>
+
+單元5 - stream(流)</br>
+
+單元6 - assert(斷言)</br>
+
+單元7 - Process (進程)</br>
+
+單元8 - Repl(自訂命令列)</br>
+
+單元9 - path(路徑)</br>
+
+單元10 - TCP,UDP,HTTP,HTTPS</br>
+
+單元11 - 使用Express、Koa框架</br>
+
+單元12 - 與MySQL溝通</br>
+
+單元13 - 與MongoDB溝通</br>
+
+單元14 - ES6 特性介紹</br>
+
+單元15 - Node.js RESTful API 與 API 文件撰寫</br>
+
+
+</span>
+
+    </div>
+
+    <!--
+        
+        This element introduces rotation.
+        
+        Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
+        element should be rotated by 90 degrees clockwise.
+        
+    -->
+    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+               <span style="font-size:20px;margin-top:-200px" class="try">
+
+
+單元16 - 使用Babel,ESLint與 webpack</br>
+
+單元17 - Node.js之websocket server搭配Redis</br>
+
+單元18 - React 基本概念1</br>
+
+單元19 - React 基本概念2</br>
+
+單元20 - Redux 基本概念1</br>
+
+單元21 - Redux 基本概念2</br>
+
+單元22 - React-router</br>
+
+
+</span>
+    </div>
+
+    <div style="margin-top:1500px" id="its" class="step" data-x="850" data-y="4000" data-rotate="90" data-scale="5">
+               <span  style="font-size:20px;margin-top:-200px" class="try">
+
+
+單元24 - 結合Node.js與React.js搭建論壇網站2</br>
+
+單元25 - 結合Node.js與React.js搭建論壇網站3</br>
+
+單元26 - 結合Node.js與React.js搭建論壇網站4</br>
+
+單元27 - 結合Node.js與React.js搭建論壇網站5</br>
+
+單元28 - 快取與緩存</br>
+
+單元29 - 後端安全機制</br>
+
+單元30 - 部署</br>
+
+單元31 - 自動化部屬流程與搭建travis ci</br>
+
+單元32 - 團隊合作與git flow</br></span>
+    </div>
+
+    <!--
+        
+        And now it gets really exciting! We move into third dimension!
+        
+        Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
+        `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
+        positioned far away from us (by 3000px).
+        
+    -->
+    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+         <a href="https://hahow.in/cr/nodejs-lession">報名連結</a>
+    </div>
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
+    </div>
+
+</div>
+
+<!--
+    
+    Hint is not related to impress.js in any way.
+    
+    But it can show you how to use impress.js features in creative way.
+    
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+    
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+    
+    ...
+    
+    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+    It's just a quick and dirty workaround to get different hint text for touch devices.
+    In a real world it should be at least placed in separate JS file ... and the touch content should be
+    probably just hidden somewhere in HTML - not hard-coded in the script.
+    
+    Just sayin' ;)
+    
+-->
+
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+<!--
+    
+    Last, but not least.
+    
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+    
+    In here I just include full source of the script to make it more readable.
+    
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+    
+-->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+    
+    The `impress()` function also gives you access to the API that controls the presentation.
+    
+    Just store the result of the call:
+    
+        var api = impress();
+    
+    and you will get three functions you can call:
+    
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( stepIndex | stepElementId | stepElement, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+    
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+    
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+    
+-->
+
+</body>
+</html>
+
+<!--
+    
+    Now you know more or less everything you need to build your first impress.js presentation, but before
+    you start...
+    
+    Oh, you've already cloned the code from GitHub?
+    
+    You have it open in text editor?
+    
+    Stop right there!
+    
+    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
+    first needs to grow in your mind.
+    
+    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
+    
+    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
+    to present. It will get you closer and closer to the layout you'll build later with impress.js.
+    
+    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
+    it earlier, because you'll only waste your time fighting with positioning of useless points.
+    
+    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about 
+    creating awesome and engaging presentations.
+    
+    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
+    
+-->
+
+<!--
+    
+    Are you still reading this?
+    
+    For real?
+    
+    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
+    to congratulate you personally :)
+    
+    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
+    or anything you like to drink. And raise a glass for me ;)
+    
+    Cheers!
+    
+-->
+
