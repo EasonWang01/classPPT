@@ -91,7 +91,7 @@
     -->
     <div class="step slide" data-x="0" data-y="-1500">
         <h1 style="font-size:50px">課程簡介</h1>
-        <p style="margin-top:100px">前幾堂課將會個別介紹Node.js核心模組之特性，並且講述相關nodejs框架，最後使用Node.js開發一個論壇類型網站，課程將會使用React.js作為前端Framework 課程後面幾堂課會提到有關web cache方面，安全方面，load balance等議題 最後會講解上架到AWS 的EC2上，使用nginx 當reverse proxy 並配置https的步驟</p>
+        <p style="margin-top:100px">前幾堂課將會個別介紹Node.js核心模組之特性，並且講述相關nodejs框架，最後使用Node.js開發一個論壇類型網站<br><br>課程將會使用React.js作為前端Framework 課程後面幾堂課會提到有關web cache方面，安全方面，load balance等議題 <br><br>最後會講解上架到AWS 的EC2上，使用nginx 當reverse proxy 並配置https的步驟</p>
     </div>
 
     <div class="step slide" data-x="1000" data-y="-1500">
@@ -208,6 +208,7 @@
     <div style="margin-top:1500px" id="its" class="step" data-x="850" data-y="4000" data-rotate="90" data-scale="5">
                <span  style="font-size:20px;margin-top:-200px" class="try">
 
+單元24 - 結合Node.js與React.js搭建論壇網站1</br>
 
 單元24 - 結合Node.js與React.js搭建論壇網站2</br>
 
@@ -293,7 +294,10 @@ if ("ontouchstart" in document.documentElement) {
     
 -->
 <script src="js/impress.js"></script>
-<script>impress().init();</script>
+<script>
+impress().init();
+window.location.replace(window.location.pathname+"#/overview");
+</script>
 
 <!--
     
