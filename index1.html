@@ -23,6 +23,32 @@
 
 <body style="background:white" class="impress-not-supported">
 
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+
+
+<!--
+    
+    Now that's the core element used by impress.js.
+    
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+    
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+    
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+    
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+    
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesting things
+    right around the corner of this tag ;)
+    
+-->
 <div id="impress">
 
     <!--
@@ -112,7 +138,7 @@
         down (4 times) to make it back to its correct size.
         
     -->
-    <div id="title" class="step" data-x="0" data-y="-100" data-scale="4">
+    <div id="title" class="step" data-x="0" data-y="500" data-scale="5">
         <span style="font-size:20px;margin-top:-200px" class="try">單元1 - Node.js安裝與NPM使用 </br>
 
 單元2 - fs(文件操作) 與 require 、 module.exports </br>
@@ -156,7 +182,7 @@
         element should be rotated by 90 degrees clockwise.
         
     -->
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+    <div id="its" class="step" data-x="2550" data-y="500" data-rotate="0" data-scale="5">
                <span style="font-size:20px;margin-top:-200px" class="try">
 
 
@@ -178,7 +204,7 @@
 </span>
     </div>
 
-    <div style="margin-top:1500px" id="its" class="step" data-x="850" data-y="4000" data-rotate="90" data-scale="5">
+    <div style="margin-top:1500px" id="its" class="step" data-x="5150" data-y="-500" data-rotate="0" data-scale="5">
                <span  style="font-size:20px;margin-top:-200px" class="try">
 
 單元23 - 結合Node.js與React.js搭建論壇網站1</br>
@@ -211,7 +237,7 @@
         positioned far away from us (by 3000px).
         
     -->
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+    <div id="tiny" class="step" data-x="2825" data-y="3825" data-z="-3000" data-rotate="0" data-scale="6">
          <a href="https://hahow.in/cr/nodejs-lession">報名連結</a>
     </div>
 
